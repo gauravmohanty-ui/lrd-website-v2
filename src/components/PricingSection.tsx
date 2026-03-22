@@ -3,8 +3,8 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const included = [
-  "Donna's 6-check AI quality pipeline",
-  "Human QC agent review — every case",
+  "Donna's 6-check quality pipeline",
+  "Human QC review — every case",
   "Missing records detection and report",
   "SHA-256 Verified Certificate",
   "Smart routing to fastest provider path",
@@ -33,9 +33,9 @@ const PricingSection = () => {
           style={{ animationDelay: "0.1s" }}
         >
           <div className="text-center mb-8">
-            <span className="text-5xl font-bold text-navy">Flat fee</span>
+            <span className="text-6xl font-bold text-navy">$40</span>
             <span className="text-body-text text-lg ml-2">/ request</span>
-            <p className="text-body-text/60 text-sm mt-2">One price. Everything included. No surprises.</p>
+            <p className="text-body-text/60 text-sm mt-2">One flat fee. Everything included. No per-page fees. No surprises.</p>
           </div>
           <div className="space-y-3 mb-8">
             {included.map((item) => (

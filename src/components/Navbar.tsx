@@ -7,9 +7,10 @@ import logo from "@/assets/LRD_logo.png";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Donna", href: "#donna" },
-  { label: "About", href: "#about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Donna", href: "/donna" },
+  { label: "Security", href: "/security" },
+  { label: "About", href: "/about" },
 ];
 
 const Navbar = () => {
@@ -38,15 +39,25 @@ const Navbar = () => {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-white/80 text-[13px] font-montserrat hover:text-teal transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-white/80 text-[13px] font-montserrat hover:text-teal transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-white/80 text-[13px] font-montserrat hover:text-teal transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -84,16 +95,27 @@ const Navbar = () => {
             <X className="w-6 h-6" />
           </button>
           <div className="flex flex-col items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-white text-xl font-montserrat font-semibold hover:text-teal transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-white text-xl font-montserrat font-semibold hover:text-teal transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-white text-xl font-montserrat font-semibold hover:text-teal transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <a
               href="tel:+13079395655"
               className="text-white/70 text-sm flex items-center gap-2"

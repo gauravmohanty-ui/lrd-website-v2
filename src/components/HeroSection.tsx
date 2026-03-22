@@ -38,12 +38,12 @@ const HeroSection = () => {
               certificate with every case. A named person who knows your firm.
             </p>
             <div className="copper-highlight inline-block rounded-lg px-5 py-3">
-              <span className="text-copper font-bold text-2xl">Flat fee</span>
+              <span className="text-copper font-bold text-4xl">$40</span>
               <span className="text-white/80 text-sm ml-2">
-                per request
+                flat fee per request
               </span>
               <span className="text-white/50 text-xs block mt-1">
-                AI QC · Human Review · SHA-256 Certificate · All included
+                Donna QC · Human Review · SHA-256 Certificate · All included
               </span>
             </div>
             <div className="flex flex-wrap gap-4">

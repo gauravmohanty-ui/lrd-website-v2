@@ -74,7 +74,7 @@ const ComparisonSection = () => {
           style={{ animationDelay: "0.2s" }}
         >
           <p className="text-navy text-lg font-semibold">
-            All of this. <span className="text-copper font-bold text-2xl">One flat fee</span> per request. Everything included.
+            All of this. <span className="text-copper font-bold text-2xl">$40 flat fee</span> per request. Everything included.
           </p>
           <div className="mt-6">
             <a href="#pricing" className="inline-flex items-center gap-2 bg-teal text-white font-semibold text-sm px-6 py-3 rounded-lg hover:bg-teal/90 transition-colors">

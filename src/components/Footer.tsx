@@ -1,4 +1,5 @@
 import { Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/LRD_logo.png";
 
 const Footer = () => {
@@ -59,18 +60,29 @@ const Footer = () => {
             <div className="space-y-2">
               {[
                 { label: "How It Works", href: "#process" },
-                { label: "Pricing", href: "#pricing" },
-                { label: "Donna", href: "#donna" },
-                { label: "About", href: "#about" },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="block text-white/40 text-sm hover:text-teal transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+                { label: "Pricing", href: "/pricing" },
+                { label: "Donna", href: "/donna" },
+                { label: "Security", href: "/security" },
+                { label: "About", href: "/about" },
+              ].map((link) =>
+                link.href.startsWith("#") ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="block text-white/40 text-sm hover:text-teal transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="block text-white/40 text-sm hover:text-teal transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
@@ -93,7 +105,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs">
-            © 2026 Legal Record Desk LLC
+            © 2026 Legal Record Desk Inc
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/30 text-xs hover:text-white/60 transition-colors">

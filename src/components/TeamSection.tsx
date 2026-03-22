@@ -56,7 +56,7 @@ const TeamSection = () => {
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 shadow-lg">
                 <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name}, ${member.title} at Legal Record Desk`}
                   className="w-full h-full object-cover object-[center_20%]"
                 />
               </div>

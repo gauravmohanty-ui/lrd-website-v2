@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "How much does record retrieval cost for attorneys?",
-    a: "LRD charges a single flat fee per record request. This includes Donna's AI quality pipeline, human QC review on every case, missing records detection, the SHA-256 Verified Certificate, and a named point of contact. There are no per-page fees, no setup fees, no monthly fees, and no minimum volume commitments. The optional Donna Summary add-on is an additional $15.",
+    a: "LRD charges a single $40 flat fee per record request. This includes Donna's AI quality pipeline, human QC review on every case, missing records detection, the SHA-256 Verified Certificate, and a named point of contact. There are no per-page fees, no setup fees, no monthly fees, and no minimum volume commitments. The optional Donna Summary add-on is an additional $15.",
   },
   {
     q: "Is it legal for law firms to outsource record retrieval?",
